@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function openRandomSong() {
+            const urlPart = 'https://www.songsterr.com/a/wa/song?id=';
+            const songId = getRandomInt(1, 40000);
+            console.log(songId);
+            const finalUrl = urlPart + songId;
+            console.log(finalUrl);
+            window.open(finalUrl, '_blank').focus();
+        }
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="openRandomSong()">Click here to get a random song to learn</button>
+</body>
+
+</html>
